@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let ranNum = parseInt(Math.random()*3);
+
+        console.log('랜덤 한 수 : ',ranNum);
+        // 지금부터 가위바위보를 시작합니다.
+        // 1. arr 배열 안에 가위, 바위, 보 데이터 입력
+        let arr = ["가위", "바위", "보"];
+        // 2. 사용자의 선택 입력받기 => myChoice
+        //      "무엇을 내시겠습니까?(가위, 바위, 보)"
+        let myChoice = prompt("무엇을 내시겠습니까?(가위, 바위, 보)");
+        console.log("myChoice:" + myChoice);
+        // 3. 컴퓨터의 선택을 세팅 => comChoice
+        //      랜덤 수 이용 => 인덱스값
+        let comChoice = arr[ranNum];
+        // 4. console 창에 나의 선택 / 컴 선택 입력
+        console.log("myChoice:" + myChoice + ", comChoice:" + comChoice);
+        // 5. 가위바위보 결과 출력
+        // 결과는 승리, 패배, 무승부
+        // 사용자 입장, "승리입니다!", "패배입니다!", "무승부입니다!"
+        let res = "";  // 승리 1, 패배 0
+        if (myChoice===comChoice) {
+                res = "무승부";
+        } else if(myChoice==="가위"){
+            res = comChoice==="보"?"승리":"패배";
+        } else if(myChoice=="바위"){
+            res = comChoice==="가위"?"승리":"패배";
+        } else if(myChoice==="보"){
+            res = comChoice==="바위"?"승리":"패배";
+        } else {
+            res = "게임 오류";
+        }
+        // res == 1? "승리":"패배";
+        alert("결과는 "+ res + "입니다!!");
+
+    </script>
+</body>
+</html>

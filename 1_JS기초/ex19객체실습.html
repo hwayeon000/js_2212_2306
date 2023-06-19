@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 포멧몬 (pokemon)
+        // 3마리 > name, type, age
+        // ex) '피카츄' "전기", 2
+        let pokemon = [
+            {
+                name : "피카츄",
+                type : "전기",
+                age : 2
+            }, 
+            {
+                name : "꼬부기",
+                type : "물",
+                age : 2
+            }, 
+            {
+                name : "뮤",
+                type : "싱크로",
+                age : 1
+            }
+        ];
+
+        
+        // 출력
+        // 제가 가장좋아하는 포멧몬은 메타몽이로 변신속성이고 2살입니다.
+        console.log("제가 가장좋아하는 포멧몬은 " + pokemon[2].name + 
+        "이고 속성은 " + pokemon[2].type + " 속성이고 " + pokemon[2].age + "살입니다.");
+
+        // 문자 포매팅
+        // `` : 백틱, "~표 위치"
+        // 변수는 ${}
+        console.log(`제가 좋아하는 포켓몬은 ${pokemon[0].name}이고 속성은 ${pokemon[0].type} 속성이고 나이는 ${pokemon[0].age} 입니다..`)
+
+    </script>    
+</body>
+</html>

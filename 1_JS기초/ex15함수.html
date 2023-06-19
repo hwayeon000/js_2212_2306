@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // makeAnyJuice1("딸기");  // 호이스팅
+
+        // 함수 = 특정 기능들을 묶어서 호출 할 수 있도록 하는 기능
+        // 장점 => 코드가 반복되지 않고 재사용성이 뛰어나다
+        
+        console.log("=======================");
+        console.log("주스 제조 시작");
+        console.log("오렌지🍊를 착즙한다");
+        console.log("오렌지 주스 완성!");
+        console.log("=======================");
+
+        // (1) 함수의 선언
+        // function 함수이름(){}
+        // (매개변수) : 함수의 재료
+        // {} : 함수 호출 시 실행시킬 로직
+
+        function makeJuice(){
+            console.log("=======================");
+            console.log("주스 제조 시작");
+            console.log("오렌지를 착즙한다");
+            console.log("오렌지 주스 완성!");
+            console.log("=======================");
+        };
+
+        // (2) 함수의 호출 : 함수 사용하려면 호출 필수!
+        makeJuice();
+
+        // (3) 매개변수를 이용한 함수
+        function makeAnyJuice(fruit){
+            console.log("=======================");
+            console.log("주스 제조 시작");
+            console.log(fruit + "를 착즙한다");
+            console.log(fruit + " 주스 완성!");
+            console.log("=======================");
+        };
+
+        makeAnyJuice("🍋레몬🍋");
+        makeAnyJuice("자몽🍊");
+
+        // (4) return문을 이용한 함수
+        // 단순 실행이 아닌 특정 값을 받고 싶다면
+        // 함수 내 return문 안에 작성
+        function makeAnyJuice1(fruit){
+            console.log("=======================");
+            console.log("주스 제조 시작");
+            console.log(fruit + "를 착즙한다");
+            console.log(fruit + " 주스 완성!");
+            console.log("=======================");
+
+            return fruit + "주스한잔 나왔습니다~ o((>ω< ))o"
+        };
+
+        alert(makeAnyJuice1("🍑복숭아🍑 "));
+        console.log(makeAnyJuice1("🍑복숭아🍑"));
+
+        // (5) 화살표 함수 (Arrow Function)
+
+        // makeToast();
+
+        // const makeToast = function(){
+        //     console.log("토스트 만들기!")
+        // };
+        const makeToast1 = () => {
+            console.log(toast + " 만들기!")
+        };
+        // let 은 변경의 위험이 있으므로 const로 고정
+        const makeToast = (toast) => {
+            console.log(toast + " 만들기!")
+        };
+
+        makeToast("토스트");
+
+
+
+    </script>
+</body>
+</html>

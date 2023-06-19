@@ -1,0 +1,45 @@
+#inputTxt{
+    width: 300px;
+    background-color: aquamarine;
+}
+
+
+/* table */
+.userData>table{
+    width: 400px;
+    border: 1px solid #4444;
+}
+.userData>table>th, tr, td{
+    border: 1px solid #4444;
+    height: 35px;
+}
+
+.userData>table tr{ 
+    border: 1px solid #4444;
+    background-color: blue;
+}
+
+
+.userData>table th{ 
+    border: 1px solid #4444;
+    background-color: rgb(250, 228, 250);
+}
+
+.userData>table td{
+    border: 1px solid #4444;
+    background-color: rgb(215, 215, 243);
+}
+
+.step1 td:nth-child(1), .step2 td:nth-child(1), .step3 td:nth-child(1) {
+    text-align: right;
+}
+
+.step4 {
+    text-align: center;
+    background-color: yellow;
+}
+
+
+/* .melon~li{
+    background-color: aqua;
+} */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" name="form" id="form">
+        <body>
+            <p>작업 진행 중... 60%...</p>
+            <progress value="60" max="100"></progress>
+        </body>
+        <span id="p_price_in"></span>
+        <div class="item-slick3" id="p_pho1" data-thumb="https://cdn.pixabay.com/photo/2023/03/02/14/28/camera-7825467_960_720.jpg">
+            <!-- <div class="wrap-pic-w pos-relative">
+                <img id="p_pho2" data-code2="d_pho2" src="https://cdn.pixabay.com/photo/2023/03/02/14/28/camera-7825467_960_720.jpg" alt="IMG-PRODUCT">
+
+                <a id="p_pho3" data-code3="d_pho3" class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="https://cdn.pixabay.com/photo/2023/03/02/14/28/camera-7825467_960_720.jpg">
+                    <i class="fa fa-expand"></i>
+                </a>
+            </div> -->
+        </div>
+        <button onclick="callBack()">제출</button>
+    </form>
+
+
+    <script>
+        const callBack = () => {
+        console.log("check callback");
+        
+        var d_pho1 = 'https://cdn.pixabay.com/photo/2023/03/02/14/28/camera-7825467_960_720.jpg';
+        var d_pho2 = 'https://www.popphoto.com/uploads/2022/04/12/rollei35_marissa_wu-scaled-e1649799615573.jpg?auto=webp&width=1440&height=992.31850117096';
+        var d_pho3 = 'http://farm5.staticflickr.com/4083/5134117092_2dbcc5327e.jpg';
+        
+        var test1 = document.querySelector('#p_pho1');
+        var test2 = document.querySelector('#p_pho2');
+        var test3 = document.querySelector('#p_pho3');
+        console.log(document.querySelector('#p_pho1'));
+        console.log(test3.getAttribute('href'));
+        test1.dataset.thumb = d_pho2;
+        test2.src = d_pho2;
+        test3.href = d_pho2;
+        
+        document.querySelector('#p_price_in').innerHTML=10;
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // 형변환
+        // (1) 숫자로
+
+        // a. 정수로 형변환 parseInt("바꿀내용")
+        let textFloat = '1.14';
+        console.log("정수 형변환 :", textFloat);            // console에서 검정색(문자열)
+        console.log("정수 형변환 :", parseInt(textFloat));  // console에서 파란색(숫자) & 1만 출력
+
+        // b. 실수로 형변환 ✨ parseFloat("바꿀내용") ✨
+        console.log("실수 형변환 :", parseFloat(textFloat));// console에서 파란색(숫자) & 실수
+
+        // c. 숫자로 형변환 ✨ Number("바꿀내용") ✨
+        console.log("숫자 형변환 :", Number(textFloat));
+
+        let textInt = '3';
+        console.log("숫자로 형변환 :", Number(textInt));
+
+
+        // (2) 문자로
+
+        let number = 56;
+
+        // a. 숫자.toString(매개변수(n)) // 매개변수(n)가 주어지면 n진법으로 변경 가능(그런데 문자열..)
+        let string = number.toString();
+        console.log('toString :', string);
+
+        // b. String(숫자)
+        let string2 = String(number);
+        console.log('String :', string2);
+
+    </script>
+</body>
+</html>

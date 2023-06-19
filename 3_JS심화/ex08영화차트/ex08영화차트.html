@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <button id="btn">데이터 요청!</button>
+    <button id="btnDate21">202101</button>
+    <button id="btnDate22">202201</button>
+    <button id="btnDate23">202301</button>
+    <!-- 영화 데이터를 뿌려줄 container -->
+    <div id="container"></div>
+
+
+
+
+    <script>
+        // case1) jQuery + ajax
+        const getData = () =>{
+            let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=cb10ac0f937bfd8efe5733f5aee51c5e&targetDt=20230201";
+            $.ajax ({
+                url : url,
+                type : "get",
+                success : (res)=>{
+                    console.log("통신에 성공하였습니다.", res);
+                    let movieList = res.boxOfficeResult.weeklyBoxOfficeList;
+                    console.log("movieList:", movieList);
+
+                    let code = "<table border='1px' solid black>";
+
+                    for (let i = 0; i < movieList.length; i++) {
+                        let rank = movieList[i].rank;
+                        let movieNm = movieList[i].movieNm;
+                        let openDt = movieList[i].openDt;
+                        console.log(rank, movieNm, openDt);
+                        code += `<tr><td>${rank}</td><td>${movieNm}</td><td>${openDt}</td></tr>`
+                    };
+
+                    code += "</table>";
+
+                    $("#container").html(code);
+                },
+                error:()=>{
+                    alert("통신에 실패하였습니다.");
+                }
+            })
+        };
+
+
+        $("#btn").click(()=>{
+            // let date = "20200101";
+            getData();
+            // reqData = "<table border='1px solid black'>";
+        });
+
+        </script>
+        <!-- <script src="./ex08영화.js"></script> -->
+</body>
+</html>

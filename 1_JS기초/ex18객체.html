@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 객체 : 속성과 값으로 구성된 데이터의 집합
+        // (1)  객체 선언
+        let person = {
+            name : "장원영",
+            birthYear : 2004,
+            group : "아이브"
+        };
+
+        // (2) 객체 출력
+        console.log("객체 ", person);
+
+        // (3) 객체 내 데이터 접근 방법
+        // case1) 객체 이름.key이름 ★
+        console.log("이름 : " + person.name);
+
+        // case2) 객체이름[key이름]
+        console.log("그룹 : " + person["group"]);
+
+        // (4) 객체 내 데이터 변경하기
+        person.name = "안유진";
+        console.log("새로운 이름 : " + person.name);
+
+        // ❌❌❌ 배열 안에 객테를 넣을 수 있고, 객체 안에 배열을 넣을 수 있다. ❌❌❌
+        // (1) 배열 안에 객체 넣기
+        let orderList = [
+            {
+                name : "아메리카노",
+                place : "takeout",
+                stamp : true
+            },{
+                name : "카페라뗴",
+                place : "here",
+                stamp : false
+            }
+        ];
+        console.log("주문서 : ", orderList);
+
+        // 배열에 접근       객체에 접근
+        // 인덱스 번호       .key
+        //배열 orderList[1] => 1객체 불러옴
+        console.log("주문서 : ", orderList[1].name);
+
+        // (2) 객체 안에 배열 넣기
+        let person2 = {
+            name : "박화연",
+            hobby : ["노래", "누워있기", "커피", "코딩"]
+        };
+
+        // 객체 접근      배열에 접근
+        // .key          인덱스 번호
+        console.log("확인 : ", person2.hobby[1]);
+        
+
+
+        // 신문법 Time!!!!  <<비구조와 할당>>
+        let {movie, nature}= {
+            movie : "아이스아메리카노",
+            nature : "아이스카페라떼"
+        };
+        console.log("확인 : ", movie);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

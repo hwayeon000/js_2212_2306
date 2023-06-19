@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <script>
+        // ❌❌❌ 호이스팅 ❌❌❌
+        // 코드가 실행되면 메모리에 변수들 미리 저장!
+        console.log("script 위쪽 : ", color);   // var : 호이스팅으로 인한 협업의 불편함 -> 개선이 let, const
+        // console.log("script 위쪽 : ", color1);  // let => error
+
+//               재선언      재할당      호이스팅
+//          var     O           O           O
+//          let     X           O           O, TDZ 보관 
+//          const   X           X           O, TDZ 보관
+
+        // let도 호이스팅이 일어남, const도 마찬가지
+        // 그러나 TDZ(Temporal Death Zone)에 저장해두고 
+        // 선언 나오기 전까지는 접근을 못하게 만듬, 의도적 제한
+
+        // ❌ 변수 ❌ : let과 var의 차이 필수!!!!
+        // abc 라는 변수 안에 3이라는 숫자 데이터를 넣기
+        // def 라는 변수 안에 'Hello World'라는 문자 데이터 넣기 
+
+        // -- JAVA                              vs   -- JS
+        // int abc = 3;                         vs      var abc = 3;
+        // String def = 'Hello World!';         vs      var def = 'Hello World!' ;
+
+
+        // 변수 : 데이터를 담을 수 있는 공간
+        // (1) var
+        var color = "black";    // 선언
+        var color = "pink";     // 재선언 가능
+        color = "yellow";       // 재할당 가능
+        console.log("var :",color);
+
+        // ES6 문법 이후 등장한 새로운 변수 (var의 단점 보완)
+        // let, const
+
+        // (2) let
+        let color1 = "black";
+        // let color2 = "pink"; // 재선언 불가
+        color1 = "yellow";      // 재할당 가능
+        console.log("let :",color1);
+
+        // (3) const
+        // 누군가 재선언하거나, 재할당하면 안되는 값;
+        // 변하면 안되는 값  // ex) 게임회사 만렙
+        const color2 = "black";
+        // const color2 = "pink"; // 재선언 불가
+        // const color2 = "yellow"; // 재할당 불가
+
+
+        let color;  // 이렇게 절대절대 선언 하지 말자!! > undifined
+    </script>
+
+</body>
+</html>

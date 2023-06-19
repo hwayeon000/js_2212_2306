@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ex01css.css">
+</head>
+<body>
+    <div>
+        입력 (｡･∀･)ﾉﾞ<br>
+        <input type="text" name="input" id="input">
+        <button id="btn">입력!</button>
+        <br>
+        <span id="inputTxt">댓글<button class='removeCom'>삭제</button></span>
+        <button id='like'>좋아요</button><span>0</span>
+        <p></p>
+    </div>
+
+    <form action="#" method="get">
+        <div class="userData">
+            <table>
+                <th colspan="2">Step1 : ID/PW 입력</th>
+                <tr class="step1">
+                    <td>아이디</td>
+                    <td><input name="id" type="text"></td>
+                </tr>
+                <tr class="step1">
+                    <td>비밀번호</td>
+                    <td><input name="pw" type="text"></td>
+                </tr>
+                <tr class="step1">
+                    <td>비밀번호 확인</td>
+                    <td><input name="pwCheck" type="text"></td>
+                </tr>
+                <!-- step1 end -->
+    
+                <th colspan="2">Step2 : 개인정보 입력</th>
+                <tr class="step2">
+                    <td>성별</td>
+                    <td>
+                        여<input type="radio" name="gender" value="woman">
+                        남<input type="radio" name="gender" value="man">
+                    </td>
+                </tr>
+                <tr class="step2">
+                    <td>혈액형</td>
+                    <td>
+                        <select name="blood" id="">
+                            <option value="A">A형</option>
+                            <option value="B">B형</option>
+                            <option value="AB">AB형</option>
+                            <option value="O">O형</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step2">
+                    <td>생일</td>
+                    <td>
+                        <input name="birth" type="date">
+                    </td>
+                </tr>
+                <!-- step2 end -->
+    
+                <th colspan="2">Step3 : 선호도</th>
+                <tr class="step3">
+                    <td>취미</td>
+                    <td>
+                        <input type="checkbox" name="habit" value="soccer"> 축구
+                        <input type="checkbox" name="habit" value="baseball"> 농구
+                        <input type="checkbox" name="habit" value="basketball"> 야구
+                    </td>
+                </tr>
+                <tr class="step3">
+                    <td>좋아하는 색</td>
+                    <td><input name="favColor" type="color"></td>
+                </tr>
+                <!-- step3 end -->
+    
+                <th colspan="2">Step4 : 적고 싶은 말</th>
+                <tr  class="step4">
+                    <td colspan="2">
+                        <textarea name="textarea" id="txtarea" cols="50" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr  class="step4">
+                    <td colspan="2">
+                        <input type="submit" name="submit">
+                        <input type="reset" name="reset">
+                    </td>
+                </tr>
+                <!-- step4 end -->
+                
+
+            </table>
+            <!-- table end -->
+        </div>
+    </form>
+
+
+
+    <!-- <div>
+        <div>
+            <p id="apple">사과</p>
+        </div>
+        <div>
+            <p id="strawberry">딸기</p>
+        </div>
+
+        <ul>
+            <li id="pineapple">파인애플</li>
+            <li>수박</li>
+            <li class="melon">메론</li>
+            <li>포도</li>
+            <li>바나나</li>
+        </ul>
+    </div> -->
+
+
+
+    <script src="./ex01Input.js"></script>
+</body>
+</html>

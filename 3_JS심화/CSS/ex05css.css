@@ -1,0 +1,11 @@
+div{
+    display: inline;
+}
+img{
+    width: 200px;
+}
+
+.newClass{
+    border: 5px solid rgb(238, 206, 101);
+}
+

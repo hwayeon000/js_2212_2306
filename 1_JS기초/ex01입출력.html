@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 스크립트 문법은 body태그 가장 하단에 작성
+        // script 안에 작성 : 문장 마지막 ;은 효율에 좋다고는 하나 미미함. 해도 되고 안해도 됨
+
+        // 1. 출력문
+        // 1-1) ❌ console창에 출력 ❌
+        //      (F12 개발자 도구 => console 탭)
+        console.log("Hello world");
+        console.error("Error!");
+        console.warn("WARNING!!");
+
+        // 1-2) 팝업팡에 출력하기
+        alert("pop!!");
+
+        // 2. 입력문
+
+        // 2-1) 확인질문 : confirm
+        //      => 확인 or 취소 => 리턴타입 : boolean
+        var dinner = confirm("저녁 드셨나욤..?");
+        console.log(dinner);
+
+        // 2-2) 입력확인문 : prompt
+        //      => 입력 가능 => 리턴타입 : String
+        //      => prompt("질문", "Default") => 기본값 선택
+        var dinner = prompt("어제 저녁 뭐 드셨어요?", "싸이버거");
+        console.log(dinner);
+
+        
+    </script>
+</body>
+</html>

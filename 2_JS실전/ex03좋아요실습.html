@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btnLikeHate").on("click", function(e){
+                console.log(e.target.id)
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        👍<span id="number">0</span>
+    </p>
+    <button class="btnLikeHate" id="like" value="vLike">좋아요</button>
+    <button class="btnLikeHate" id="hate" value="vHate">싫어요</button>
+
+
+    <script src="./ex03실습.js"></script>
+
+    <script>
+        let today = new Date();
+        let myDate = `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일`
+        let hour = today.getHours();
+        let min = today.getMinutes();
+        let sec = today.getSeconds();
+
+        document.write("<br><br>");
+
+        document.write("<h1>오늘의 날짜</h1>");
+        document.write(myDate + "<br>");
+        document.write(`${hour}시 ${min}분 ${sec}초 입니다..`);
+
+        let newFormatData = new Intl.DateTimeFormat("kr").format();
+        
+        console.log(newFormatData);
+        document.write(`<br>${newFormatData}`);
+        document.write("<br> Intl 날짜 포맷")
+        let a = new Intl.RelativeTimeFormat().format(-10, "days");
+        let b = new Intl.RelativeTimeFormat().format(-10, "hours");
+        document.write(`<br>${a} <br>${b}`);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // ARS 프로그램을 제작 
+        // 사용자가 1을 입력 => '요금 조회' 팝업창 
+        //         2를 입력 => '요금제 변경' 팝업창 
+        //         *을 입력 => '다시듣기' 팝업창 
+        //         #을 입력 => '상담원 연결'팝업창 
+        //     그 이외 입력 => '다시 입력하세요!'
+        
+        // 1. 사용자에게 숫자를 입력받는다.
+        let userNum = prompt("숫자를 입력해주세요");
+        
+        // 2. 조건문
+        // Case1) 다중if문 사용
+        if(userNum==="1"){
+            alert("요금조회");
+        }else if (userNum==="2"){
+            alert("요금제 변경");
+        }else{
+            alert("다시 입력해주세요!");
+        }
+        // 시간관계상 여기까지...
+
+        // Case2) switch문 사용
+        switch(userNum){
+            case "1" :
+                alert("요금 조회");
+                break;
+            
+            case "2" :
+                alert("요금제 변경");
+                break;
+
+            default : //else랑 비슷한 느낌
+                alert("다시 입력해주세요");
+        }
+
+
+
+
+    </script>
+</body>
+</html>
